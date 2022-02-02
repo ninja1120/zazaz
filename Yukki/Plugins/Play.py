@@ -50,13 +50,8 @@ async def play(_, message: Message):
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
         await message.reply_text('- اشترك بقناة البوت لتستطيع تشغيل الاغاني  .',
                                  reply_markup=reply_markup03)
-    else:
-    if message.chat.id not in db_mem:
-        db_mem[message.chat.id] = {}
-    if message.sender_chat:
-        return await message.reply_text(
-            "You're an __Anonymous Admin__ in this Chat Group!\nRevert back to User Account From Admin Rights."
-        )
+        else None
+    )
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
