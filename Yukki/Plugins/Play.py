@@ -45,7 +45,7 @@ async def play(_, message: Message):
     await message.delete()
     # I Can See You !!
     do = requests.get(
-        f"https://api.telegram.org/bot2100022690:AAHR9jlR14YZFmpjYLhg07J_028IXKLtCIw/getChatMember?chat_id=@animeeven&user_id={message.from_user.id}").text
+        f"https://api.telegram.org/bot5120659146:AAEBR-WUmvW6664PuS9xoEvmJ3-3cpXUceI/getChatMember?chat_id=@animeeven&user_id={message.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
         keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/animeeven')]]
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
