@@ -50,7 +50,7 @@ async def play(_, message: Message):
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
         await message.reply_text('- اشترك بقناة البوت لتستطيع تشغيل الاغاني  .',
                                  reply_markup=reply_markup03)
-    else:
+    else None
     if message.chat.id not in db_mem:
         db_mem[message.chat.id] = {}
     if message.sender_chat:
